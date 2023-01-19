@@ -1,0 +1,183 @@
+Document Object in JavaScript:
+>JavaScript can change HTML elements and attributes.
+>JavaScript can add new and remove existing HTML elements and attributes.
+>JavaScript can change CSS styles.
+
+Example:
+For changing content of HTML by js:
+
+<html>
+<head>
+<title> hello </title>
+</head>
+<body>
+<p> Welcome</p>
+</body>
+</html>
+Output:
+Welcome
+
+If we insert javascript code in html 
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> hello </title>
+</head>
+<body>
+<p id ="abc"> Welcome World</p>
+<script>
+  document.getElementById("abc").innerHTML="Hello World!!"
+</script>
+</body>
+</html>
+Output:
+Hello World!!
+
+To access an element of HTML use attribute of element called id with help of  this id getElementById() method find the element in html
+innerHTML is a property which used to get or replace content of html
+Here Welcome World  is replaced by Hello World!!
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> hello </title>
+</head>
+<body>
+<p id ="abc"> Welcome</p>
+<script>
+let a=document.getElementsByTagName("head")
+console.log(a)
+</script>
+</body>
+</html>
+
+Methods to find HTML elements:
+<!DOCTYPE html>
+<html>
+<head>
+<title> hello </title>
+</head>
+<body>
+<a href="">Click here</a>
+<p id ="abc"> Welcome</p>
+<img src="sam1.jpg" width="100" height="200"/>
+<script>
+let a=document.getElementsByTagName("head")
+console.log(a)
+console.log(document.body)
+console.log(document.head)
+console.log(document.anchors)
+console.log(document.documentElement)
+console.log(document.images)
+console.log(document.implementation)
+console.log(document.lastModified)
+console.log(document.title)
+console.log(document.scripts)
+</script>
+</body>
+</html>
+
+Output:
+browser-> inspect -> console:
+
+HTMLCollection(1)0: headlength: 1[[Prototype]]: HTMLCollection
+index.html:13 <body>​…​</body>​
+index.html:14 <head>​…​</head>​
+index.html:15 HTMLCollection(0)
+index.html:16 <html>​<head>​…​</head>​<body>​…​</body>​</html>​
+index.html:17 HTMLCollection(1)
+index.html:18 DOMImplementation
+index.html:19 01/12/2023 08:10:38
+index.html:20 hello
+index.html:21 HTMLCollection(2)
+index.html:22 http://127.0.0.1:5500/index.html
+index.html:52 Live reload enabled.
+ 
+Window Object in JavaScript
+The window object represents an open window in a browser.
+Methods of window objects:
+<html>
+    <head>
+        <title>hello</title>
+    </head>
+    <body>
+        <p>welocme everyone good morning</p>
+        <p id="id1"></p>
+        <p id="id2"></p>
+        <img src="sam1.jpg" width="200" height="200"/>
+        <script>
+            window.alert("Safe")
+            let text="javascript"
+            let encode_text=window.btoa(text)
+            let decode_test=window.atob(encode_text)
+            window.document.getElementById("id1").innerHTML="Encode"+encode_text+"<br>"+"Decode"
+            +decode_test;
+            window.blur()
+            window.focus()
+           window.frameElement;
+           let length=window.history.length;
+           window.document.getElementById("id2").innerHTML=length;
+        </script>
+    </body>
+</html>
+Output:
+ welocme everyone good morning
+
+EncodeamF2YXNjcmlwdA==
+Decodejavascript
+
+1
+
+Difference between Window Object and Document Object
+
+Window Object:
+
+1.It is the first one getting loaded in the browser
+2.Major properties of window object 
+innerWidth, innerHeight, length
+3.To access property of window object
+Syntax: window.property
+To access method of window object
+Syntax: window.method()
+4. An iframe actually is considered as a new window with its own document loaded into it
+The property to access a frame is window.frames[]
+5.Window  object contains  document object so we can use window keyword to access document methods and properties
+6.Window Properties:
+>innerWidth
+>innerHeight
+>length
+>parent
+>screen
+>opener
+>location
+>closed
+>self
+
+1.It is a document that will be loaded into the browser it can be html file or php file.
+
+2.Major properties of document object cookie, URL, title.
+
+3. To access property of document object
+Syntax: window.document.property
+(or) document.property
+To access method of document object
+Syntax: window.document.method
+(or) document.method
+
+4.Document object is not responsible for loading other windows related to parent window
+
+
+5.Document object placed within Window object .So Window superior to document.
+7.Document Properties:
+>Domain
+>doctype
+>defaultView
+>cookie
+>body
+>head
+>anchor
+
+
+
+
